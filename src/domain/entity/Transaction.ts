@@ -14,11 +14,8 @@ export default class Transaction {
 
     generateInstallments(): void {
         let number = 1;
-        let amount =
-            Math.round((this.amount / this.numberInstallments) * 100) / 100;
-        const diff =
-            Math.round((this.amount - amount * this.numberInstallments) * 100) /
-            100;
+        let amount = Math.round((this.amount / this.numberInstallments) * 100) / 100;
+        const diff = Math.round((this.amount - amount * this.numberInstallments) * 100) / 100;
 
         while (number <= this.numberInstallments) {
             if (number === this.numberInstallments) {
